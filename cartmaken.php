@@ -17,22 +17,23 @@
     <meta name="author" content="Luca">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style55.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/style222.css" />
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
 
-    
-				
+    <link rel="stylesheet" type="text/css" href="CSS/style222.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style55.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styling.css" />
+
+
   </head>
  <body>
     <!-- Logo & cart link -->
     <div class="container-flude  main-container">
-        <div class="store-header"> 
-        <a class="brand" href="cartmaken.php"><img src="Images/motor.jpg" alt="" class="logo-image"></a>
-        <a href="#" class="shopping-cart-btn btn btn-default btn-xl navbar-right hidden-xs hidden-sm"> <i class="glyphicon glyphicon-shopping-cart"></i></a>
+        <div class="store-header" style="background-image: inherit;background-color: white;"> 
+        <a class="brand" href="cartmaken.php"><img src="Images/compio.png" alt="" class="logo-image"></a>
     </div>
 
     <!-- Modal -->
@@ -49,6 +50,7 @@
         <ul class="nav navbar-nav">
           <li class="active" style="text-align: center;"><a href="cartmaken.php">Home</a></li>
           <li><a hredf="#" style="text-align: center;"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
+          <li><a href="#" class=" btn btn-default btn-xl "> <i class="glyphicon glyphicon-shopping-cart"></i></a></li>
         </ul> 
         
     </nav>
@@ -180,7 +182,6 @@
       <script href="JSfiles.js" type="text/javascript"></script>
       <!-- SCRIPTS -->
       <script src="https://v1-demo.livelycart.com/assets/bootstrap3/bootstrap-3.4.1/js/bootstrap.min.js?1552027855" type="text/javascript" charset="utf-8"></script>
-      <script src="https://v1-demo.livelycart.com/assets/bootstrap3/js/custom.js?1552027855" type="text/javascript" charset="utf-8"></script>
       <script type="text/javascript">
         $(document).ready(function() {
 
@@ -193,7 +194,7 @@
             $alert_container =  $('.alert_container');
 
             $('.show_details_link').on('click', function(e){
-              $alert_container.fadeOut();
+              /*$alert_container.fadeOut();
               e.preventDefault();
                   $ModelProductName = $('#cartContent');
                   $ModelProductData = $('#cartModal');
@@ -207,7 +208,9 @@
                   return false;
                 }
                 $ModelProductName.html(data);
-              });
+                
+              });*/
+              
             });
         /*Ajax Product details in Modal End*/
         });
@@ -227,7 +230,7 @@
           onResizeWindow();
 
           $('#shopping-cart-btn, .shopping-cart-btn').on('click', function(e){
-            e.preventDefault();
+            /*e.preventDefault();
 
             $('#cartModal').modal('show');
 
@@ -237,7 +240,7 @@
             $cartModal.html('<div style="padding:10%; text-align:center;">  <img src="https://v1-demo.livelycart.com/assets/img/ajax-loader.gif"></br> Loading...</div>');
             $.post(requestURL, function(data){
               $cartModal.html(data.page_data);
-           },'JSON');
+           },'JSON');*/
         });
 
       });
