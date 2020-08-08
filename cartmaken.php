@@ -1,3 +1,11 @@
+<?php
+  include "db.php";
+  $statement = $DB->prepare("SELECT * FROM product");
+  $statement->execute();
+  $result = $statement->fetchAll();
+  //print_r($result[2]);
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +19,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/style55.css" />
     <link rel="stylesheet" type="text/css" href="CSS/style222.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+
+    
+				
   </head>
  <body>
     <!-- Logo & cart link -->
@@ -75,6 +89,11 @@
           <!-- Laat producten zien -->
           <div class="col-md-8 col-lg-9 col-sm-8 page-container col-xs-12">
             <div class="alert alert-info" style="text-align:center;">Welkom op onze website!</div>
+            
+            <div class="your-class">
+              <img src="assets/Banner1.png">
+              <img src="assets/Banner2.png">
+            </div>
 
             <h3 style="text-align: center;">Alle Producten</h3> <hr>
             <!-- Sorteerfunctie -->
@@ -93,104 +112,24 @@
 
             <div>
             <div class="custom-product row custom-btn-sort">
-              
+              <?php
+                foreach($result as $results => $val){
+                  
+                
+              ?>
               <!-- Product Items -->
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
                 <div class="thumbnail text-center">
                   <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
+                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="<?php echo $result[$results]["item_image"]; ?>" class="img-responsive" alt=""></a>
                   </div>
                   <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
+                  <h4 title="<?php echo $result[$results]["item_name"]; ?>"><?php echo $result[$results]["item_name"]; ?></h4>
+                  <h3 class="store-product-price">&#8364;<?php echo $result[$results]["item_price"]; ?></h3>
+                  <a title="<?php echo $result[$results]["item_name"]; ?>" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
                 </div>
               </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 thumb thumb-image-view">
-                <div class="thumbnail text-center">
-                  <div class="thumb-image">
-                    <a title="Kleding stuk" class="show_details_link" href="#"><img src="Images/shirtje.jpg" class="img-responsive" alt=""></a>
-                  </div>
-                  <div class="caption"></div>
-                  <h4 title="Monster Shirt">Monster shirt&#8230;</h4>
-                  <h3 class="store-product-price">&#8364;15.00</h3>
-                  <a title="Monster Shirt" href="#" class="btn btn-warning btn-sm show_details_link">Bekijk Details</a>
-                </div>
-              </div>
-
+              <?php } ?>
             </div>
 
             <div class="row">
@@ -236,6 +175,8 @@
         </div>
       </div>
       
+      <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+
       <script href="JSfiles.js" type="text/javascript"></script>
       <!-- SCRIPTS -->
       <script src="https://v1-demo.livelycart.com/assets/bootstrap3/bootstrap-3.4.1/js/bootstrap.min.js?1552027855" type="text/javascript" charset="utf-8"></script>
@@ -243,6 +184,10 @@
       <script type="text/javascript">
         $(document).ready(function() {
 
+          $('.your-class').slick({
+            autoplay: true,
+            arrows: false,
+          });
          /*Ajax Product details in Modal*/
         
             $alert_container =  $('.alert_container');
