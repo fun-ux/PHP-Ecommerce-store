@@ -50,7 +50,7 @@
         <ul class="nav navbar-nav">
           <li class="active" style="text-align: center;"><a href="cartmaken.php">Home</a></li>
           <li><a hredf="#" style="text-align: center;"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
-          <li><a href="#" class=" btn btn-default btn-xl "> <i class="glyphicon glyphicon-shopping-cart"></i></a></li>
+          <li><a href="cart.php" class=" btn btn-default btn-xl "> <i class="glyphicon glyphicon-shopping-cart"></i></a></li>
         </ul> 
         
     </nav>
