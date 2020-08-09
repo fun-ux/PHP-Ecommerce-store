@@ -2,8 +2,9 @@
   background-color: #f8f8f8 !important;
   border-color: #e7e7e7;
 }
-.navbar-light .navbar-toggler{
-  border-color: #f8f8f8;
+
+#navbarNav li{
+  text-align: center;
 }
 .store-header {
   max-width: 100%;
