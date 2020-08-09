@@ -1,0 +1,17 @@
+
+
+  @media only screen and (max-width: 600px) {
+    .store-header{
+      margin-left: 30%;
+      margin-right: 30%;
+    }
+    .logo-image {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 766px){
+    .store-header{
+        margin-left: 35%;
+        margin-right: 35%;
+      }
+  }
