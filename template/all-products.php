@@ -39,5 +39,4 @@
     </div>
 </section>
 <!-- end all products -->
-</main>    
-<!-- end #main-site -->  
+
