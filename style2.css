@@ -1,6 +1,18 @@
 .navbar-light .navbar-toggler{
     border-color: #f8f8f8;
   }
-.font-rubik {
+  section .font-rubik {
     text-align: center;
 }
+@media only screen and (max-width: 420px) {
+    .slick-dots {
+        display: none;
+    }
+}
+#top-sale .product img{
+    transition: transform 0.5s ease;
+}
+#top-sale .product img:hover{
+    transform: scale(1.1);
+}
+
