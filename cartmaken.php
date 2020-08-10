@@ -1,8 +1,9 @@
 <?php
-  include "db.php";
+  include "database/db.php";
   $statement = $DB->prepare("SELECT * FROM product");
   $statement->execute();
   $result = $statement->fetchAll();
+
   //print_r($result[2]);
   
 ?>

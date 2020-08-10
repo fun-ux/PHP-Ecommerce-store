@@ -1,7 +1,7 @@
 <?php
 
 // require MySQL Connection
-require "db.php";
+require "database/db.php";
 
 // require Product Class
 //require ('database/Product.php');
@@ -10,9 +10,10 @@ require "db.php";
 //require ('database/Cart.php');
 
 
-/*
+
 // Product object
-$product = new Product($db);
+//$product = new Product();
+/*
 $product_shuffle = $product->getData();
 
 // Cart object
