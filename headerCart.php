@@ -58,7 +58,7 @@
           
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto my-2 order-0 order-md-1 position-relative">
-                  <li class="nav-item active">
+                  <li class="nav-item ">
                       <a class="nav-link " href="./">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
@@ -68,7 +68,7 @@
                       <a class="nav-link" href="#Products">Products</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="./cart.php"><i class="fas fa-shopping-cart"></i> Cart</a>
+                      <a class="nav-link active" href="./cart.php"><i class="fas fa-shopping-cart"></i> Cart</a>
                   </li>
               </ul>
           </div>
