@@ -29,7 +29,19 @@
                 <div class="price py-2">
                 <span>$<?php echo $result[$results]["item_price"]; ?></span>
                 </div>
-                <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                <form method="post">
+                    <input type="hidden" name="item_id" value="<?php echo $result[$results]['item_id'] ?? '1'; ?>">
+                    <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                    <?php
+                    if ($array[$results] == "true"){
+                        echo '<button type="submit" disabled class="btn btn-success font-size-12">In the Cart</button>';
+                        
+                    }else{
+                        echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-12">Add to Cart</button>';
+                    }
+                    ?>
+
+                </form>
             </div>
             </div>
         </div>

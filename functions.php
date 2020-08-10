@@ -3,10 +3,10 @@
 // require MySQL Connection
 require "database/db.php";
 
-// require Product Class
-//require ('database/Product.php');
+// require Product 
+require ('database/Product.php');
 
-// require Cart Class
+// require Cart 
 //require ('database/Cart.php');
 
 

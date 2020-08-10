@@ -1,9 +1,6 @@
 <?php
     // require functions.php file
     require ('functions.php');
-    $statement = $DB->prepare("SELECT * FROM product");
-    $statement->execute();
-    $result = $statement->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
