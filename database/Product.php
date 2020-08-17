@@ -12,13 +12,13 @@ $result2 = $statement2->fetchAll();
 $array = array();
 
 foreach($result as $results => $val){
+    
     $key = array_search($result2[$results]["item_id"], array_column($result, 'item_id')) ;
-    if ($result[$key]['item_id'] == $result[$results]['item_id']){
-        array_push($array,'true');
+    if ($results != count($result2)){
+        array_push($array,$result[$key]['item_id']);
     }else{
-        $result[$key]['item_id'] = 0;
-        array_push($array,'false');
-        
+        break;
     }
+    
 }
-//echo($array[6]) ;
+
